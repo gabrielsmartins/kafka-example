@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="GradleMigrationSettings" migrationVersion="1" />
+  <component name="GradleSettings">
+    <option name="linkedExternalProjectsSettings">
+      <GradleProjectSettings>
+        <option name="disableWrapperSourceDistributionNotification" value="true" />
+        <option name="distributionType" value="DEFAULT_WRAPPED" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="gradleHome" value="/opt/gradle/gradle-6.2.2" />
+        <option name="modules">
+          <set>
+            <option value="$PROJECT_DIR$" />
+          </set>
+        </option>
+        <option name="useQualifiedModuleNames" value="true" />
+      </GradleProjectSettings>
+      <GradleProjectSettings>
+        <option name="disableWrapperSourceDistributionNotification" value="true" />
+        <option name="distributionType" value="DEFAULT_WRAPPED" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$/../inventory-core" />
+        <option name="gradleHome" value="/opt/gradle/gradle-6.2.2" />
+        <option name="modules">
+          <set>
+            <option value="$PROJECT_DIR$/../inventory-core" />
+            <option value="$PROJECT_DIR$/../inventory-core/adapters" />
+            <option value="$PROJECT_DIR$/../inventory-core/adapters/persistence" />
+            <option value="$PROJECT_DIR$/../inventory-core/application" />
+            <option value="$PROJECT_DIR$/../inventory-core/common" />
+          </set>
+        </option>
+        <option name="useQualifiedModuleNames" value="true" />
+      </GradleProjectSettings>
+      <GradleProjectSettings>
+        <option name="disableWrapperSourceDistributionNotification" value="true" />
+        <option name="distributionType" value="DEFAULT_WRAPPED" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$/../inventory-web" />
+        <option name="gradleHome" value="/opt/gradle/gradle-6.2.2" />
+        <option name="modules">
+          <set>
+            <option value="$PROJECT_DIR$/../inventory-web" />
+          </set>
+        </option>
+        <option name="useQualifiedModuleNames" value="true" />
+      </GradleProjectSettings>
+    </option>
+  </component>
+</project>
