@@ -11,6 +11,11 @@
         <option name="modules">
           <set>
             <option value="$PROJECT_DIR$" />
+            <option value="$PROJECT_DIR$/common-kafka" />
+            <option value="$PROJECT_DIR$/email-service" />
+            <option value="$PROJECT_DIR$/fraud-service" />
+            <option value="$PROJECT_DIR$/log-service" />
+            <option value="$PROJECT_DIR$/producer-service" />
           </set>
         </option>
         <option name="useQualifiedModuleNames" value="true" />
@@ -26,7 +31,19 @@
             <option value="$PROJECT_DIR$/../inventory-core/adapters" />
             <option value="$PROJECT_DIR$/../inventory-core/adapters/persistence" />
             <option value="$PROJECT_DIR$/../inventory-core/application" />
-            <option value="$PROJECT_DIR$/../inventory-core/common" />
+            <option value="$PROJECT_DIR$/../inventory-core/shared" />
+          </set>
+        </option>
+        <option name="useQualifiedModuleNames" value="true" />
+      </GradleProjectSettings>
+      <GradleProjectSettings>
+        <option name="disableWrapperSourceDistributionNotification" value="true" />
+        <option name="distributionType" value="DEFAULT_WRAPPED" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$/../inventory-messaging" />
+        <option name="gradleHome" value="/opt/gradle/gradle-6.2.2" />
+        <option name="modules">
+          <set>
+            <option value="$PROJECT_DIR$/../inventory-messaging" />
           </set>
         </option>
         <option name="useQualifiedModuleNames" value="true" />
@@ -39,6 +56,17 @@
         <option name="modules">
           <set>
             <option value="$PROJECT_DIR$/../inventory-web" />
+          </set>
+        </option>
+        <option name="useQualifiedModuleNames" value="true" />
+      </GradleProjectSettings>
+      <GradleProjectSettings>
+        <option name="distributionType" value="DEFAULT_WRAPPED" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$/../kafka-gui" />
+        <option name="gradleHome" value="/opt/gradle/gradle-6.2.2" />
+        <option name="modules">
+          <set>
+            <option value="$PROJECT_DIR$/../kafka-gui" />
           </set>
         </option>
         <option name="useQualifiedModuleNames" value="true" />
