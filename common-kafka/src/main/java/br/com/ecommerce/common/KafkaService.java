@@ -41,7 +41,11 @@ public class KafkaService<T> implements Closeable {
             if (!records.isEmpty()) {
                 System.out.println(records.count() + " records found...");
                 for (var record : records) {
-                    parse.parse(record);
+                    try {
+                        parse.parse(record);
+                    } catch (Exception e) {
+                        e.printStackTrace();
+                    }
                 }
             }
         }

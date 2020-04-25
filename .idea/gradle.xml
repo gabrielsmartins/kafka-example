@@ -16,6 +16,7 @@
             <option value="$PROJECT_DIR$/fraud-service" />
             <option value="$PROJECT_DIR$/log-service" />
             <option value="$PROJECT_DIR$/producer-service" />
+            <option value="$PROJECT_DIR$/user-service" />
           </set>
         </option>
         <option name="useQualifiedModuleNames" value="true" />

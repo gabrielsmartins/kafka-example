@@ -2,31 +2,83 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="563515a7-5d05-47ff-b691-7c5a3e527ff2" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/user-service/src/main/java/br/com/ecommerce/consumer/CreateUserService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user-service/src/main/java/br/com/ecommerce/message/Order.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/5.2.1/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.2.1/executionHistory/executionHistory.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/5.2.1/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.2.1/executionHistory/executionHistory.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/5.2.1/fileChanges/last-build.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.2.1/fileChanges/last-build.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/5.2.1/fileContent/fileContent.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.2.1/fileContent/fileContent.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/5.2.1/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.2.1/fileHashes/fileHashes.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/5.2.1/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.2.1/fileHashes/fileHashes.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/5.2.1/fileHashes/resourceHashesCache.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.2.1/fileHashes/resourceHashesCache.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/5.2.1/gc.properties" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.2.1/gc.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/5.2.1/javaCompile/classAnalysis.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.2.1/javaCompile/classAnalysis.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/5.2.1/javaCompile/jarAnalysis.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.2.1/javaCompile/jarAnalysis.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/5.2.1/javaCompile/javaCompile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.2.1/javaCompile/javaCompile.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/5.2.1/javaCompile/taskHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.2.1/javaCompile/taskHistory.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/cache.properties" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/cache.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/vcs-1/gc.properties" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/vcs-1/gc.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/jarRepositories.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/uiDesigner.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/FraudDetectorService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/br/com/ecommerce/consumer/EmailService.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/br/com/ecommerce/consumer/EmailService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/br/com/ecommerce/consumer/FraudDetectorService.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/br/com/ecommerce/consumer/FraudDetectorService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/br/com/ecommerce/consumer/LogService.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/br/com/ecommerce/consumer/LogService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/br/com/ecommerce/consumer/OrderProducer.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/br/com/ecommerce/producer/OrderProducer.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/br/com/ecommerce/producer/OrderProducer.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/inventory-web" beforeDir="false" afterPath="$PROJECT_DIR$/build/inventory-web" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/inventory-web.json" beforeDir="false" afterPath="$PROJECT_DIR$/build/inventory-web.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/inventory-web.log" beforeDir="false" afterPath="$PROJECT_DIR$/build/inventory-web.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/inventory-web.log.json" beforeDir="false" afterPath="$PROJECT_DIR$/build/inventory-web.log.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/libs/e-commerce-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/build/libs/e-commerce-1.0-SNAPSHOT.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/springAppName_IS_UNDEFINED" beforeDir="false" afterPath="$PROJECT_DIR$/build/springAppName_IS_UNDEFINED" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/springAppName_IS_UNDEFINED.json" beforeDir="false" afterPath="$PROJECT_DIR$/build/springAppName_IS_UNDEFINED.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/springAppName_IS_UNDEFINED.log" beforeDir="false" afterPath="$PROJECT_DIR$/build/springAppName_IS_UNDEFINED.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/springAppName_IS_UNDEFINED.log.json" beforeDir="false" afterPath="$PROJECT_DIR$/build/springAppName_IS_UNDEFINED.log.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/jar/MANIFEST.MF" beforeDir="false" afterPath="$PROJECT_DIR$/build/tmp/jar/MANIFEST.MF" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common-kafka/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/common-kafka/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common-kafka/build/classes/java/main/br/com/ecommerce/common/ConsumerFunction.class" beforeDir="false" afterPath="$PROJECT_DIR$/common-kafka/build/classes/java/main/br/com/ecommerce/common/ConsumerFunction.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common-kafka/build/classes/java/main/br/com/ecommerce/common/KafkaService.class" beforeDir="false" afterPath="$PROJECT_DIR$/common-kafka/build/classes/java/main/br/com/ecommerce/common/KafkaService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common-kafka/build/libs/common-kafka-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/common-kafka/build/libs/common-kafka-1.0-SNAPSHOT.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common-kafka/build/tmp/jar/MANIFEST.MF" beforeDir="false" afterPath="$PROJECT_DIR$/common-kafka/build/tmp/jar/MANIFEST.MF" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common-kafka/src/main/java/br/com/ecommerce/common/ConsumerFunction.java" beforeDir="false" afterPath="$PROJECT_DIR$/common-kafka/src/main/java/br/com/ecommerce/common/ConsumerFunction.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common-kafka/src/main/java/br/com/ecommerce/common/KafkaDispatcher.java" beforeDir="false" afterPath="$PROJECT_DIR$/common-kafka/src/main/java/br/com/ecommerce/common/KafkaDispatcher.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common-kafka/src/main/java/br/com/ecommerce/common/KafkaService.java" beforeDir="false" afterPath="$PROJECT_DIR$/common-kafka/src/main/java/br/com/ecommerce/common/KafkaService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common-kafka/src/main/java/br/com/ecommerce/deserializer/GsonDeserializer.java" beforeDir="false" afterPath="$PROJECT_DIR$/common-kafka/src/main/java/br/com/ecommerce/deserializer/GsonDeserializer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common-kafka/src/main/java/br/com/ecommerce/serializer/GsonSerializer.java" beforeDir="false" afterPath="$PROJECT_DIR$/common-kafka/src/main/java/br/com/ecommerce/serializer/GsonSerializer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/e-commerce.plantuml" beforeDir="false" afterPath="$PROJECT_DIR$/e-commerce.plantuml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/email-service/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/email-service/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/email-service/build/libs/email-service-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/email-service/build/libs/email-service-1.0-SNAPSHOT.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/email-service/build/tmp/jar/MANIFEST.MF" beforeDir="false" afterPath="$PROJECT_DIR$/email-service/build/tmp/jar/MANIFEST.MF" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/email-service/src/main/java/br/com/ecommerce/consumer/EmailService.java" beforeDir="false" afterPath="$PROJECT_DIR$/email-service/src/main/java/br/com/ecommerce/consumer/EmailService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fraud-service/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/fraud-service/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fraud-service/build/classes/java/main/br/com/ecommerce/consumer/FraudDetectorService.class" beforeDir="false" afterPath="$PROJECT_DIR$/fraud-service/build/classes/java/main/br/com/ecommerce/consumer/FraudDetectorService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fraud-service/build/classes/java/main/br/com/ecommerce/message/Order.class" beforeDir="false" afterPath="$PROJECT_DIR$/fraud-service/build/classes/java/main/br/com/ecommerce/message/Order.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fraud-service/build/libs/fraud-service-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/fraud-service/build/libs/fraud-service-1.0-SNAPSHOT.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fraud-service/build/tmp/jar/MANIFEST.MF" beforeDir="false" afterPath="$PROJECT_DIR$/fraud-service/build/tmp/jar/MANIFEST.MF" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fraud-service/src/main/java/br/com/ecommerce/consumer/FraudDetectorService.java" beforeDir="false" afterPath="$PROJECT_DIR$/fraud-service/src/main/java/br/com/ecommerce/consumer/FraudDetectorService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fraud-service/src/main/java/br/com/ecommerce/message/Order.java" beforeDir="false" afterPath="$PROJECT_DIR$/fraud-service/src/main/java/br/com/ecommerce/message/Order.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.jar" beforeDir="false" afterPath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" afterPath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gradlew.bat" beforeDir="false" afterPath="$PROJECT_DIR$/gradlew.bat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/log-service/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/log-service/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/log-service/build/libs/log-service-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/log-service/build/libs/log-service-1.0-SNAPSHOT.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/log-service/build/tmp/jar/MANIFEST.MF" beforeDir="false" afterPath="$PROJECT_DIR$/log-service/build/tmp/jar/MANIFEST.MF" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/log-service/src/main/java/br/com/ecommerce/consumer/LogService.java" beforeDir="false" afterPath="$PROJECT_DIR$/log-service/src/main/java/br/com/ecommerce/consumer/LogService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/producer-service/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/producer-service/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/producer-service/build/classes/java/main/br/com/ecommerce/message/Order.class" beforeDir="false" afterPath="$PROJECT_DIR$/producer-service/build/classes/java/main/br/com/ecommerce/message/Order.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/producer-service/build/classes/java/main/br/com/ecommerce/producer/OrderProducer.class" beforeDir="false" afterPath="$PROJECT_DIR$/producer-service/build/classes/java/main/br/com/ecommerce/producer/OrderProducer.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/producer-service/build/libs/producer-service-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/producer-service/build/libs/producer-service-1.0-SNAPSHOT.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/producer-service/build/tmp/jar/MANIFEST.MF" beforeDir="false" afterPath="$PROJECT_DIR$/producer-service/build/tmp/jar/MANIFEST.MF" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/producer-service/src/main/java/br/com/ecommerce/message/Order.java" beforeDir="false" afterPath="$PROJECT_DIR$/producer-service/src/main/java/br/com/ecommerce/message/Order.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/producer-service/src/main/java/br/com/ecommerce/producer/OrderProducer.java" beforeDir="false" afterPath="$PROJECT_DIR$/producer-service/src/main/java/br/com/ecommerce/producer/OrderProducer.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/settings.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/settings.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/ecommerce/consumer/EmailService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/ecommerce/consumer/FraudDetectorService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/ecommerce/consumer/LogService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/ecommerce/producer/OrderProducer.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../inventory-web/logs/inventory-messaging" beforeDir="false" afterPath="$PROJECT_DIR$/../inventory-web/logs/inventory-messaging" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../inventory-web/logs/inventory-messaging.json" beforeDir="false" afterPath="$PROJECT_DIR$/../inventory-web/logs/inventory-messaging.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../inventory-web/src/main/java/br/com/inventory/web/dto/response/errors/ErrorMessageResponseDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/../inventory-web/src/main/java/br/com/inventory/web/dto/response/errors/ErrorMessageResponseDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../inventory-web/src/main/java/br/com/inventory/web/exception/InvalidOrderItemException.java" beforeDir="false" afterPath="$PROJECT_DIR$/../inventory-web/src/main/java/br/com/inventory/web/exception/InvalidOrderItemException.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -121,8 +173,9 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="extract.method.default.visibility" value="private" />
     <property name="last_directory_selection" value="$PROJECT_DIR$/producer-service/src/main/java/br/com/ecommerce" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../kafka-gui" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
@@ -148,19 +201,32 @@
       <recent name="br.com.ecommerce.consumer" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/../inventory-messaging" />
       <recent name="$PROJECT_DIR$/../inventory-messaging/src/main/resources" />
+      <recent name="$PROJECT_DIR$/../inventory-messaging" />
     </key>
   </component>
   <component name="RunAnythingCache">
     <option name="myCommands">
       <command value="gradle bootJar" />
       <command value="gradle clean build" />
-      <command value="gradle compileJava" />
       <command value="gradle build" />
+      <command value="gradle compileJava" />
     </option>
   </component>
-  <component name="RunManager" selected="Gradle.e-commerce [build]">
+  <component name="RunManager" selected="Application.OrderProducer">
+    <configuration name="CreateUserService" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="br.com.ecommerce.consumer.CreateUserService" />
+      <module name="e-commerce.user-service.main" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="br.com.ecommerce.consumer.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="EmailService" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="br.com.ecommerce.consumer.EmailService" />
       <module name="e-commerce.email-service.main" />
@@ -213,7 +279,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="e-commerce [build]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="e-commerce [compileJava]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -224,26 +290,7 @@
         </option>
         <option name="taskNames">
           <list>
-            <option value="build" />
-          </list>
-        </option>
-        <option name="vmOptions" value="" />
-      </ExternalSystemSettings>
-      <GradleScriptDebugEnabled>true</GradleScriptDebugEnabled>
-      <method v="2" />
-    </configuration>
-    <configuration name="e-commerce:common-kafka [build]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$/common-kafka" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value="build" />
+            <option value="compileJava" />
           </list>
         </option>
         <option name="vmOptions" value="" />
@@ -299,20 +346,20 @@
       </method>
     </configuration>
     <list>
-      <item itemvalue="Application.FraudDetectorService (1)" />
-      <item itemvalue="Application.EmailService" />
+      <item itemvalue="Application.FraudDetectorService" />
+      <item itemvalue="Application.CreateUserService" />
+      <item itemvalue="Gradle.e-commerce [compileJava]" />
       <item itemvalue="Application.OrderProducer" />
+      <item itemvalue="Application.EmailService" />
       <item itemvalue="Application.LogService" />
-      <item itemvalue="Gradle.e-commerce:common-kafka [build]" />
-      <item itemvalue="Gradle.e-commerce [build]" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Gradle.e-commerce [build]" />
-        <item itemvalue="Gradle.e-commerce:common-kafka [build]" />
         <item itemvalue="Application.LogService" />
-        <item itemvalue="Application.OrderProducer" />
         <item itemvalue="Application.EmailService" />
+        <item itemvalue="Application.OrderProducer" />
+        <item itemvalue="Gradle.e-commerce [compileJava]" />
+        <item itemvalue="Application.CreateUserService" />
       </list>
     </recent_temporary>
   </component>
@@ -334,22 +381,22 @@
     <option name="LAST_COMMIT_MESSAGE" value="Implementando State Pattern" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="278" y="59" width="835" height="684" key="#Project_Structure" timestamp="1587086127613">
+    <state x="278" y="59" width="835" height="684" key="#Project_Structure" timestamp="1587839035637">
       <screen x="0" y="27" width="1366" height="741" />
     </state>
-    <state x="278" y="59" width="835" height="684" key="#Project_Structure/0.27.1366.741@0.27.1366.741" timestamp="1587086127613" />
-    <state x="141" y="55" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1586224086637">
+    <state x="278" y="59" width="835" height="684" key="#Project_Structure/0.27.1366.741@0.27.1366.741" timestamp="1587839035637" />
+    <state x="141" y="55" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1587839023626">
       <screen x="0" y="27" width="1366" height="741" />
     </state>
-    <state x="141" y="55" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.27.1366.741@0.27.1366.741" timestamp="1586224086637" />
-    <state x="367" y="202" width="622" height="398" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1586643342843">
+    <state x="141" y="55" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.27.1366.741@0.27.1366.741" timestamp="1587839023626" />
+    <state x="367" y="202" width="647" height="398" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1587838017111">
       <screen x="0" y="27" width="1366" height="741" />
     </state>
-    <state x="367" y="202" width="622" height="398" key="#com.intellij.fileTypes.FileTypeChooser/0.27.1366.741@0.27.1366.741" timestamp="1586643342843" />
-    <state x="491" y="109" width="374" height="584" key="#com.intellij.ide.util.MemberChooser" timestamp="1587088281882">
+    <state x="367" y="202" width="647" height="398" key="#com.intellij.fileTypes.FileTypeChooser/0.27.1366.741@0.27.1366.741" timestamp="1587838017111" />
+    <state x="491" y="109" width="539" height="591" key="#com.intellij.ide.util.MemberChooser" timestamp="1587838648044">
       <screen x="0" y="27" width="1366" height="741" />
     </state>
-    <state x="491" y="109" width="374" height="584" key="#com.intellij.ide.util.MemberChooser/0.27.1366.741@0.27.1366.741" timestamp="1587088281882" />
+    <state x="491" y="109" width="539" height="591" key="#com.intellij.ide.util.MemberChooser/0.27.1366.741@0.27.1366.741" timestamp="1587838648044" />
     <state x="437" y="185" width="524" height="452" key="#com.intellij.ide.util.PackageChooserDialog" timestamp="1587094078810">
       <screen x="0" y="27" width="1366" height="741" />
     </state>
@@ -378,42 +425,50 @@
       <screen x="0" y="27" width="1366" height="741" />
     </state>
     <state x="165" y="27" width="1026" height="741" key="CommitChangelistDialog2/0.27.1366.741@0.27.1366.741" timestamp="1586656560385" />
-    <state x="466" y="102" width="424" height="597" key="FileChooserDialogImpl" timestamp="1586720970188">
+    <state x="748" y="121" width="424" height="597" key="FileChooserDialogImpl" timestamp="1587838589090">
       <screen x="0" y="27" width="1366" height="741" />
     </state>
-    <state x="466" y="102" width="424" height="597" key="FileChooserDialogImpl/0.27.1366.741@0.27.1366.741" timestamp="1586720970188" />
-    <state width="1320" height="141" key="GridCell.Tab.0.bottom" timestamp="1587094486420">
+    <state x="748" y="121" width="424" height="597" key="FileChooserDialogImpl/0.27.1366.741@0.27.1366.741" timestamp="1587838589090" />
+    <state width="1320" height="242" key="GridCell.Tab.0.bottom" timestamp="1587839238083">
       <screen x="0" y="27" width="1366" height="741" />
     </state>
-    <state width="1320" height="141" key="GridCell.Tab.0.bottom/0.27.1366.741@0.27.1366.741" timestamp="1587094486420" />
-    <state width="1320" height="141" key="GridCell.Tab.0.center" timestamp="1587094486419">
+    <state width="1320" height="242" key="GridCell.Tab.0.bottom/0.27.1366.741@0.27.1366.741" timestamp="1587839238083" />
+    <state width="1320" height="242" key="GridCell.Tab.0.center" timestamp="1587839238082">
       <screen x="0" y="27" width="1366" height="741" />
     </state>
-    <state width="1320" height="141" key="GridCell.Tab.0.center/0.27.1366.741@0.27.1366.741" timestamp="1587094486419" />
-    <state width="1320" height="141" key="GridCell.Tab.0.left" timestamp="1587094486419">
+    <state width="1320" height="242" key="GridCell.Tab.0.center/0.27.1366.741@0.27.1366.741" timestamp="1587839238082" />
+    <state width="1320" height="242" key="GridCell.Tab.0.left" timestamp="1587839238082">
       <screen x="0" y="27" width="1366" height="741" />
     </state>
-    <state width="1320" height="141" key="GridCell.Tab.0.left/0.27.1366.741@0.27.1366.741" timestamp="1587094486419" />
-    <state width="1320" height="141" key="GridCell.Tab.0.right" timestamp="1587094486420">
+    <state width="1320" height="242" key="GridCell.Tab.0.left/0.27.1366.741@0.27.1366.741" timestamp="1587839238082" />
+    <state width="1320" height="242" key="GridCell.Tab.0.right" timestamp="1587839238083">
       <screen x="0" y="27" width="1366" height="741" />
     </state>
-    <state width="1320" height="141" key="GridCell.Tab.0.right/0.27.1366.741@0.27.1366.741" timestamp="1587094486420" />
-    <state width="1320" height="196" key="GridCell.Tab.1.bottom" timestamp="1586730548747">
+    <state width="1320" height="242" key="GridCell.Tab.0.right/0.27.1366.741@0.27.1366.741" timestamp="1587839238083" />
+    <state width="1320" height="379" key="GridCell.Tab.1.bottom" timestamp="1587436851589">
       <screen x="0" y="27" width="1366" height="741" />
     </state>
-    <state width="1320" height="196" key="GridCell.Tab.1.bottom/0.27.1366.741@0.27.1366.741" timestamp="1586730548747" />
-    <state width="1320" height="196" key="GridCell.Tab.1.center" timestamp="1586730548747">
+    <state width="1320" height="379" key="GridCell.Tab.1.bottom/0.27.1366.741@0.27.1366.741" timestamp="1587436851588" />
+    <state width="1320" height="379" key="GridCell.Tab.1.center" timestamp="1587436851586">
       <screen x="0" y="27" width="1366" height="741" />
     </state>
-    <state width="1320" height="196" key="GridCell.Tab.1.center/0.27.1366.741@0.27.1366.741" timestamp="1586730548747" />
-    <state width="1320" height="196" key="GridCell.Tab.1.left" timestamp="1586730548747">
+    <state width="1320" height="379" key="GridCell.Tab.1.center/0.27.1366.741@0.27.1366.741" timestamp="1587436851586" />
+    <state width="1320" height="379" key="GridCell.Tab.1.left" timestamp="1587436851586">
       <screen x="0" y="27" width="1366" height="741" />
     </state>
-    <state width="1320" height="196" key="GridCell.Tab.1.left/0.27.1366.741@0.27.1366.741" timestamp="1586730548747" />
-    <state width="1320" height="196" key="GridCell.Tab.1.right" timestamp="1586730548747">
+    <state width="1320" height="379" key="GridCell.Tab.1.left/0.27.1366.741@0.27.1366.741" timestamp="1587436851586" />
+    <state width="1320" height="379" key="GridCell.Tab.1.right" timestamp="1587436851587">
       <screen x="0" y="27" width="1366" height="741" />
     </state>
-    <state width="1320" height="196" key="GridCell.Tab.1.right/0.27.1366.741@0.27.1366.741" timestamp="1586730548747" />
+    <state width="1320" height="379" key="GridCell.Tab.1.right/0.27.1366.741@0.27.1366.741" timestamp="1587436851587" />
+    <state x="127" y="90" width="1092" height="629" key="MergeDialog" timestamp="1587170835204">
+      <screen x="0" y="27" width="1366" height="741" />
+    </state>
+    <state x="127" y="90" width="1092" height="629" key="MergeDialog/0.27.1366.741@0.27.1366.741" timestamp="1587170835204" />
+    <state x="388" y="114" width="580" height="573" key="MultipleFileMergeDialog" timestamp="1587170835206">
+      <screen x="0" y="27" width="1366" height="741" />
+    </state>
+    <state x="388" y="114" width="580" height="573" key="MultipleFileMergeDialog/0.27.1366.741@0.27.1366.741" timestamp="1587170835206" />
     <state x="278" y="95" width="799" height="612" key="NewModule_or_Project.wizard" timestamp="1586720974347">
       <screen x="0" y="27" width="1366" height="741" />
     </state>
@@ -426,14 +481,30 @@
       <screen x="0" y="27" width="1366" height="741" />
     </state>
     <state x="455" y="177" width="446" height="448" key="chooseDestDirectoryDialog/0.27.1366.741@0.27.1366.741" timestamp="1587094468769" />
-    <state x="4" y="27" width="1347" height="741" key="new project wizard" timestamp="1587094400257">
+    <state x="416" y="151" width="524" height="499" key="extract.method.dialog" timestamp="1587827403267">
       <screen x="0" y="27" width="1366" height="741" />
     </state>
-    <state x="4" y="27" width="1347" height="741" key="new project wizard/0.27.1366.741@0.27.1366.741" timestamp="1587094400257" />
-    <state x="347" y="174" width="672" height="677" key="run.anything.popup" timestamp="1587094486396">
+    <state x="416" y="151" width="524" height="499" key="extract.method.dialog/0.27.1366.741@0.27.1366.741" timestamp="1587827403267" />
+    <state x="0" y="27" width="703" height="741" key="find.popup" timestamp="1587838591825">
       <screen x="0" y="27" width="1366" height="741" />
     </state>
-    <state x="347" y="174" width="672" height="677" key="run.anything.popup/0.27.1366.741@0.27.1366.741" timestamp="1587094486396" />
+    <state x="0" y="27" width="703" height="741" key="find.popup/0.27.1366.741@0.27.1366.741" timestamp="1587838591825" />
+    <state x="4" y="27" width="1347" height="741" key="new project wizard" timestamp="1587832157169">
+      <screen x="0" y="27" width="1366" height="741" />
+    </state>
+    <state x="4" y="27" width="1347" height="741" key="new project wizard/0.27.1366.741@0.27.1366.741" timestamp="1587832157169" />
+    <state x="347" y="174" width="672" height="677" key="run.anything.popup" timestamp="1587838660397">
+      <screen x="0" y="27" width="1366" height="741" />
+    </state>
+    <state x="347" y="174" width="672" height="677" key="run.anything.popup/0.27.1366.741@0.27.1366.741" timestamp="1587838660397" />
+    <state x="346" y="89" key="search.everywhere.popup" timestamp="1587828483185">
+      <screen x="0" y="27" width="1366" height="741" />
+    </state>
+    <state x="346" y="89" key="search.everywhere.popup/0.27.1366.741@0.27.1366.741" timestamp="1587828483185" />
+    <state x="408" y="311" width="540" height="180" key="vcs.readOnlyHandler.ReadOnlyStatusDialog" timestamp="1587170832607">
+      <screen x="0" y="27" width="1366" height="741" />
+    </state>
+    <state x="408" y="311" width="540" height="180" key="vcs.readOnlyHandler.ReadOnlyStatusDialog/0.27.1366.741@0.27.1366.741" timestamp="1587170832607" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -450,6 +521,11 @@
           <url>file://$PROJECT_DIR$/../inventory-web/src/main/java/br/com/inventory/web/controller/orders/OrderController.java</url>
           <line>46</line>
           <option name="timeStamp" value="2" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/../inventory-messaging/src/test/java/br/com/inventory/messaging/consumer/OrderConsumerTest.java</url>
+          <line>27</line>
+          <option name="timeStamp" value="3" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
