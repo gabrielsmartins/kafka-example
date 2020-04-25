@@ -17,6 +17,7 @@
             <option value="$PROJECT_DIR$/log-service" />
             <option value="$PROJECT_DIR$/producer-service" />
             <option value="$PROJECT_DIR$/user-service" />
+            <option value="$PROJECT_DIR$/web-service" />
           </set>
         </option>
         <option name="useQualifiedModuleNames" value="true" />
