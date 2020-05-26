@@ -20,9 +20,7 @@ public class CreateUserService implements ConsumerFunction<Order> {
     public CreateUserService() throws SQLException {
         String url ="jdbc:sqlite:users_database.db";
         this.connection = DriverManager.getConnection(url);
-        PreparedStatement preparedStatement = this.connection.prepareStatement("create table if not exists users(" +
-                "uuid varchar(200) primary key, " +
-                "email varchar(200))");
+        PreparedStatement preparedStatement = this.connection.prepareStatement("create table if not exists users (uuid varchar(200), email varchar(200), constraint PK_User primary key (uuid))");
         preparedStatement.execute();
     }
 
@@ -56,7 +54,7 @@ public class CreateUserService implements ConsumerFunction<Order> {
     }
 
     private void insertNewUser(String email) throws SQLException {
-            var preparedStatement = this.connection.prepareStatement("insert into users (uuid,email) values (?,?");
+            var preparedStatement = this.connection.prepareStatement("insert into users (uuid,email) values (?,?)");
             preparedStatement.setString(1, UUID.randomUUID().toString());
             preparedStatement.setString(2, email);
             preparedStatement.execute();
@@ -68,6 +66,6 @@ public class CreateUserService implements ConsumerFunction<Order> {
         var preparedStatement = this.connection.prepareStatement("select uuid from users where email = ? limit 1");
         preparedStatement.setString(1, email);
         var resultSet = preparedStatement.executeQuery();
-        return resultSet.next();
+        return !resultSet.next();
     }
 }

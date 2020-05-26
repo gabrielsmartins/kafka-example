@@ -6,4 +6,5 @@ include 'log-service'
 include 'producer-service'
 include 'user-service'
 include 'web-service'
+include 'report-service'
 
