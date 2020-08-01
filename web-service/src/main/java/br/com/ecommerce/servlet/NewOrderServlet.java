@@ -1,5 +1,6 @@
 package br.com.ecommerce.servlet;
 
+import br.com.ecommerce.common.CorrelationId;
 import br.com.ecommerce.common.KafkaDispatcher;
 import br.com.ecommerce.message.Order;
 
@@ -34,20 +35,20 @@ public class NewOrderServlet extends HttpServlet {
             var amount = new BigDecimal(req.getParameter("amount"));
 
             var order = new Order(orderId, amount, email);
+            CorrelationId correlationId = new CorrelationId(NewOrderServlet.class.getSimpleName());
 
-            orderDispatcher.send("ECOMMERCE_NEW_ORDER", email, order);
+            orderDispatcher.send("ECOMMERCE_NEW_ORDER", email, correlationId, order);
 
-            var emailMessage = "Thank you for your order! We are processing your order!";
-            emailDispatcher.send("ECOMMERCE_SEND_EMAIL", email, emailMessage);
+            var payload = "Thank you for your order! We are processing your order!";
+
+            emailDispatcher.send("ECOMMERCE_SEND_EMAIL", email, correlationId, payload);
 
             System.out.println("Order was sent successfully");
 
             resp.setStatus(HttpServletResponse.SC_CREATED);
             PrintWriter writer = resp.getWriter();
             writer.print("Order was sent successfully");
-        } catch (ExecutionException e) {
-            throw new ServletException(e);
-        } catch (InterruptedException e) {
+        } catch (ExecutionException | InterruptedException e) {
             throw new ServletException(e);
         }
     }

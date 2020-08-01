@@ -2,6 +2,7 @@ package br.com.ecommerce.consumer;
 
 import br.com.ecommerce.common.ConsumerFunction;
 import br.com.ecommerce.common.KafkaService;
+import br.com.ecommerce.common.Message;
 import org.apache.kafka.clients.consumer.ConsumerRecord;
 
 import java.util.Map;
@@ -20,7 +21,7 @@ public class EmailService implements ConsumerFunction<String> {
     }
 
     @Override
-    public void parse(ConsumerRecord<String, String> record) {
+    public void parse(ConsumerRecord<String, Message<String>> record) {
         System.out.println("---------------------------------------------");
         System.out.println("Processing new order, checking for fraud ...");
         System.out.println("Key : " + record.key());

@@ -3,6 +3,7 @@ package ecommerce.consumer;
 import br.com.ecommerce.common.ConsumerFunction;
 import br.com.ecommerce.common.KafkaDispatcher;
 import br.com.ecommerce.common.KafkaService;
+import br.com.ecommerce.common.Message;
 import ecommerce.message.User;
 import ecommerce.utils.IOUtils;
 import org.apache.kafka.clients.consumer.ConsumerRecord;
@@ -20,7 +21,7 @@ public class ReportService implements ConsumerFunction<User> {
     public static void main(String[] args) {
         var reportService = new ReportService();
         try(var service = new KafkaService(ReportService.class.getSimpleName(),
-                "USER_NEW_REPORT", reportService::parse,
+                "ECOMMERCE_USER_NEW_REPORT", reportService::parse,
                 User.class,
                 Map.of())) {
             service.run();
@@ -28,7 +29,7 @@ public class ReportService implements ConsumerFunction<User> {
     }
 
     @Override
-    public void parse(ConsumerRecord<String, User> record) throws ExecutionException, InterruptedException {
+    public void parse(ConsumerRecord<String, Message<User>> record) throws ExecutionException, InterruptedException {
         System.out.println("---------------------------------------------");
         System.out.println("Processing report ...");
         System.out.println("Key : " + record.key());
@@ -37,7 +38,7 @@ public class ReportService implements ConsumerFunction<User> {
         System.out.println("Offset : " + record.offset());
         System.out.println("Timestamp : " + record.timestamp());
 
-        var user = record.value();
+        var user = record.value().getPayload();
         File target = new File(user.getReportPath());
 
         IOUtils.copyTo(SOURCE, target);

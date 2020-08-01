@@ -1,6 +1,6 @@
 package br.com.ecommerce.common;
 
-import br.com.ecommerce.deserializer.GsonDeserializer;
+import br.com.ecommerce.serialization.GsonDeserializer;
 import org.apache.kafka.clients.consumer.ConsumerConfig;
 import org.apache.kafka.clients.consumer.KafkaConsumer;
 import org.apache.kafka.common.serialization.StringDeserializer;
@@ -16,7 +16,7 @@ import java.util.regex.Pattern;
 public class KafkaService<T> implements Closeable {
 
 
-    private final KafkaConsumer<String, T> consumer;
+    private final KafkaConsumer<String, Message<T>> consumer;
     private final ConsumerFunction parse;
 
     public KafkaService(String groupId, String topic, ConsumerFunction parse, Class<T> type, Map<String, String> properties) {
@@ -31,7 +31,7 @@ public class KafkaService<T> implements Closeable {
 
     private  KafkaService(ConsumerFunction parse, String groupId, Class<T> type, Map<String, String> properties) {
         this.parse = parse;
-        this.consumer = new KafkaConsumer<String, T>(getProperties(groupId, type, properties));
+        this.consumer = new KafkaConsumer<String, Message<T>>(getProperties(groupId, type, properties));
     }
 
 
@@ -59,7 +59,6 @@ public class KafkaService<T> implements Closeable {
         properties.setProperty(ConsumerConfig.GROUP_ID_CONFIG, groupId);
         properties.setProperty(ConsumerConfig.CLIENT_ID_CONFIG, UUID.randomUUID().toString());
         //properties.setProperty(ConsumerConfig.MAX_POLL_INTERVAL_MS_CONFIG, "1");
-        properties.setProperty(GsonDeserializer.TYPE_CONFIG, type.getName());
         properties.putAll(overrideProperties);
         return properties;
     }

@@ -1,5 +1,6 @@
 package br.com.ecommerce.producer;
 
+import br.com.ecommerce.common.CorrelationId;
 import br.com.ecommerce.common.KafkaDispatcher;
 import br.com.ecommerce.message.Order;
 
@@ -20,12 +21,13 @@ public class OrderProducer {
 
                     var order = new Order(orderId, amount, email);
 
-                    var key = UUID.randomUUID().toString();
-                    var value = "150000,244550.50";
-                    orderDispatcher.send("ECOMMERCE_NEW_ORDER", email, order);
+                    String newOrderTopic = "ECOMMERCE_NEW_ORDER";
+                    CorrelationId correlationId = new CorrelationId(OrderProducer.class.getSimpleName());
+                    orderDispatcher.send(newOrderTopic, email, correlationId, order);
 
                     var emailMessage = "Thank you for your order! We are processing your order!";
-                    emailDispatcher.send("ECOMMERCE_SEND_EMAIL", email, emailMessage);
+                    String sendEmailTopic = "ECOMMERCE_SEND_EMAIL";
+                    emailDispatcher.send(sendEmailTopic, email, correlationId, emailMessage);
                 }
             }
         }

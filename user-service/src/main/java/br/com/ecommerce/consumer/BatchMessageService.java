@@ -1,8 +1,6 @@
 package br.com.ecommerce.consumer;
 
-import br.com.ecommerce.common.ConsumerFunction;
-import br.com.ecommerce.common.KafkaDispatcher;
-import br.com.ecommerce.common.KafkaService;
+import br.com.ecommerce.common.*;
 import br.com.ecommerce.message.User;
 import org.apache.kafka.clients.consumer.ConsumerRecord;
 
@@ -33,7 +31,7 @@ public class BatchMessageService implements ConsumerFunction<String> {
     public static void main(String[] args) throws SQLException {
         var batchService = new BatchMessageService();
         try(var service = new KafkaService(CreateUserService.class.getSimpleName(),
-                "USER_NOTIFY_ALL_USERS", batchService::parse,
+                "ECOMMERCE_USER_NOTIFY_ALL_USERS", batchService::parse,
                 String.class,
                 Map.of())) {
             service.run();
@@ -41,7 +39,7 @@ public class BatchMessageService implements ConsumerFunction<String> {
     }
 
     @Override
-    public void parse(ConsumerRecord<String, String> record) throws ExecutionException, InterruptedException, SQLException {
+    public void parse(ConsumerRecord<String, Message<String>> record) throws ExecutionException, InterruptedException, SQLException {
         System.out.println("---------------------------------------------");
         System.out.println("Processing new batch");
         System.out.println("Key : " + record.key());
@@ -50,8 +48,13 @@ public class BatchMessageService implements ConsumerFunction<String> {
         System.out.println("Offset : " + record.offset());
         System.out.println("Timestamp : " + record.timestamp());
 
+        Message<String> message = record.value();
         for(User user : getAll()){
-            userDispatcher.send(record.value(), user.getUuid(), user);
+            String topic = message.getPayload();
+            String key = user.getUuid();
+            CorrelationId correlationId = message.getId()
+                                                 .continueWith(BatchMessageService.class.getSimpleName());
+            userDispatcher.send(topic, key, correlationId, user);
         }
     }
 

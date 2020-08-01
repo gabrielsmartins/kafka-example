@@ -1,4 +1,4 @@
-rootProject.name = 'e-commerce'
+rootProject.name = 'kafka-example'
 include 'email-service'
 include 'fraud-service'
 include 'common-kafka'

@@ -2,6 +2,7 @@ package br.com.ecommerce.consumer;
 
 import br.com.ecommerce.common.ConsumerFunction;
 import br.com.ecommerce.common.KafkaService;
+import br.com.ecommerce.common.Message;
 import br.com.ecommerce.message.Order;
 import org.apache.kafka.clients.consumer.ConsumerRecord;
 
@@ -35,7 +36,7 @@ public class CreateUserService implements ConsumerFunction<Order> {
     }
 
     @Override
-    public void parse(ConsumerRecord<String, Order> record) throws ExecutionException, InterruptedException, SQLException {
+    public void parse(ConsumerRecord<String, Message<Order>> record) throws ExecutionException, InterruptedException, SQLException {
         System.out.println("---------------------------------------------");
         System.out.println("Processing new order, checking for new user");
         System.out.println("Key : " + record.key());
@@ -44,8 +45,9 @@ public class CreateUserService implements ConsumerFunction<Order> {
         System.out.println("Offset : " + record.offset());
         System.out.println("Timestamp : " + record.timestamp());
 
-        var order = record.value();
 
+        Message<Order> message = record.value();
+        Order order = message.getPayload();
         String email = order.getEmail();
 
         if(isNewUser(email)){

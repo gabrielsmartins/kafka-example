@@ -1,5 +1,6 @@
 package br.com.ecommerce.servlet;
 
+import br.com.ecommerce.common.CorrelationId;
 import br.com.ecommerce.common.KafkaDispatcher;
 
 import javax.servlet.ServletException;
@@ -24,15 +25,17 @@ public class NewReportServlet extends HttpServlet {
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         try {
 
-            batchDispatcher.send("USER_NOTIFY_ALL_USERS", "USER_NEW_REPORT", "USER_NEW_REPORT");
+            String topic = "ECOMMERCE_USER_NOTIFY_ALL_USERS";
+            String key = "ECOMMERCE_USER_NEW_REPORT";
+            CorrelationId correlationId = new CorrelationId(NewReportServlet.class.getSimpleName());
+            String payload = "ECOMMERCE_USER_NEW_REPORT";
+            batchDispatcher.send(topic, key, correlationId, payload);
 
             System.out.println("Sent generated report to all users");
             resp.setStatus(HttpServletResponse.SC_CREATED);
             PrintWriter writer = resp.getWriter();
             writer.print("Report requests generated");
-        } catch (ExecutionException e) {
-            throw new ServletException(e);
-        } catch (InterruptedException e) {
+        } catch (ExecutionException | InterruptedException e) {
             throw new ServletException(e);
         }
     }
