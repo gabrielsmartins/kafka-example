@@ -29,7 +29,6 @@ public class CreateUserService implements ConsumerFunction<Order> {
         var createUserService = new CreateUserService();
         try(var service = new KafkaService(CreateUserService.class.getSimpleName(),
                 "ECOMMERCE_NEW_ORDER", createUserService::parse,
-                Order.class,
                 Map.of())) {
             service.run();
         }

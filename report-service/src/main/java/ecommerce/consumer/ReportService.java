@@ -22,7 +22,6 @@ public class ReportService implements ConsumerFunction<User> {
         var reportService = new ReportService();
         try(var service = new KafkaService(ReportService.class.getSimpleName(),
                 "ECOMMERCE_USER_NEW_REPORT", reportService::parse,
-                User.class,
                 Map.of())) {
             service.run();
         }

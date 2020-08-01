@@ -16,7 +16,6 @@ public class FraudDetectorService implements ConsumerFunction<Order> {
         var fraudDetectorService = new FraudDetectorService();
         try(var service = new KafkaService(FraudDetectorService.class.getSimpleName(),
                 "ECOMMERCE_NEW_ORDER", fraudDetectorService::parse,
-                Order.class,
                 Map.of())) {
             service.run();
         }

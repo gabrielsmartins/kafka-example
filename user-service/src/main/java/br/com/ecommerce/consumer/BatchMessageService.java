@@ -32,7 +32,6 @@ public class BatchMessageService implements ConsumerFunction<String> {
         var batchService = new BatchMessageService();
         try(var service = new KafkaService(CreateUserService.class.getSimpleName(),
                 "ECOMMERCE_USER_NOTIFY_ALL_USERS", batchService::parse,
-                String.class,
                 Map.of())) {
             service.run();
         }
