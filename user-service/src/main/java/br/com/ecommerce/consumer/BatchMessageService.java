@@ -28,7 +28,7 @@ public class BatchMessageService implements ConsumerFunction<String> {
         preparedStatement.execute();
     }
 
-    public static void main(String[] args) throws SQLException {
+    public static void main(String[] args) throws SQLException, ExecutionException, InterruptedException {
         var batchService = new BatchMessageService();
         try(var service = new KafkaService(CreateUserService.class.getSimpleName(),
                 "ECOMMERCE_USER_NOTIFY_ALL_USERS", batchService::parse,
@@ -53,7 +53,8 @@ public class BatchMessageService implements ConsumerFunction<String> {
             String key = user.getUuid();
             CorrelationId correlationId = message.getId()
                                                  .continueWith(BatchMessageService.class.getSimpleName());
-            userDispatcher.send(topic, key, correlationId, user);
+            userDispatcher.sendAsync(topic, key, correlationId, user);
+            System.out.println("Message was sent to user " + user);
         }
     }
 

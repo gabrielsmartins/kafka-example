@@ -1,6 +1,7 @@
 package br.com.ecommerce.common;
 
 import br.com.ecommerce.serialization.GsonDeserializer;
+import br.com.ecommerce.serialization.GsonSerializer;
 import org.apache.kafka.clients.consumer.ConsumerConfig;
 import org.apache.kafka.clients.consumer.KafkaConsumer;
 import org.apache.kafka.common.serialization.StringDeserializer;
@@ -11,6 +12,7 @@ import java.util.Collections;
 import java.util.Map;
 import java.util.Properties;
 import java.util.UUID;
+import java.util.concurrent.ExecutionException;
 import java.util.regex.Pattern;
 
 public class KafkaService<T> implements Closeable {
@@ -35,16 +37,22 @@ public class KafkaService<T> implements Closeable {
     }
 
 
-    public void run() {
-        while (true) {
-            var records = consumer.poll(Duration.ofMillis(100));
-            if (!records.isEmpty()) {
-                System.out.println(records.count() + " records found...");
-                for (var record : records) {
-                    try {
-                        parse.parse(record);
-                    } catch (Exception e) {
-                        e.printStackTrace();
+    public void run() throws ExecutionException, InterruptedException {
+        try(var deadLetterDispatcher = new KafkaDispatcher<>()) {
+            while (true) {
+                var records = consumer.poll(Duration.ofMillis(100));
+                if (!records.isEmpty()) {
+                    System.out.println(records.count() + " records found...");
+                    for (var record : records) {
+                        try {
+                            parse.parse(record);
+                        } catch (Exception e) {
+                            var message = record.value();
+                            deadLetterDispatcher.send("ECOMMERCE_DEADLETTER", message.getId().toString(),
+                                    message.getId().continueWith("DeadLetter"),
+                                    new GsonSerializer<>().serialize("", message));
+                            e.printStackTrace();
+                        }
                     }
                 }
             }

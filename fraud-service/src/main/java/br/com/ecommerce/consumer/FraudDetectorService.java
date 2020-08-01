@@ -12,7 +12,7 @@ public class FraudDetectorService implements ConsumerFunction<Order> {
 
     private final KafkaDispatcher<Order> orderKafkaDispatcher = new KafkaDispatcher<>();
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws ExecutionException, InterruptedException {
         var fraudDetectorService = new FraudDetectorService();
         try(var service = new KafkaService(FraudDetectorService.class.getSimpleName(),
                 "ECOMMERCE_NEW_ORDER", fraudDetectorService::parse,
