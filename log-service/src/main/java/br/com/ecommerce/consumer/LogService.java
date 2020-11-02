@@ -1,7 +1,5 @@
 package br.com.ecommerce.consumer;
 
-import br.com.ecommerce.common.ConsumerFunction;
-import br.com.ecommerce.common.KafkaService;
 import br.com.ecommerce.common.Message;
 import org.apache.kafka.clients.consumer.ConsumerConfig;
 import org.apache.kafka.clients.consumer.ConsumerRecord;

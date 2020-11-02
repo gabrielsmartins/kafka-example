@@ -1,7 +1,7 @@
 package br.com.ecommerce.servlet;
 
 import br.com.ecommerce.common.CorrelationId;
-import br.com.ecommerce.common.KafkaDispatcher;
+import br.com.ecommerce.producer.KafkaDispatcher;
 import br.com.ecommerce.message.Order;
 
 import javax.servlet.ServletException;
@@ -17,13 +17,11 @@ import java.util.concurrent.ExecutionException;
 public class NewOrderServlet extends HttpServlet {
 
     private final KafkaDispatcher<Order> orderDispatcher = new KafkaDispatcher<>();
-    private final KafkaDispatcher emailDispatcher = new KafkaDispatcher<>();
 
     @Override
     public void destroy() {
         super.destroy();
         orderDispatcher.close();
-        emailDispatcher.close();
     }
 
     @Override
@@ -38,10 +36,6 @@ public class NewOrderServlet extends HttpServlet {
             CorrelationId correlationId = new CorrelationId(NewOrderServlet.class.getSimpleName());
 
             orderDispatcher.send("ECOMMERCE_NEW_ORDER", email, correlationId, order);
-
-            var payload = "Thank you for your order! We are processing your order!";
-
-            emailDispatcher.send("ECOMMERCE_SEND_EMAIL", email, correlationId, payload);
 
             System.out.println("Order was sent successfully");
 

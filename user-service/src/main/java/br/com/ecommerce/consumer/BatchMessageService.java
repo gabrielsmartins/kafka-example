@@ -1,7 +1,9 @@
 package br.com.ecommerce.consumer;
 
-import br.com.ecommerce.common.*;
+import br.com.ecommerce.common.CorrelationId;
+import br.com.ecommerce.common.Message;
 import br.com.ecommerce.message.User;
+import br.com.ecommerce.producer.KafkaDispatcher;
 import org.apache.kafka.clients.consumer.ConsumerRecord;
 
 import java.sql.Connection;
@@ -10,10 +12,9 @@ import java.sql.PreparedStatement;
 import java.sql.SQLException;
 import java.util.LinkedList;
 import java.util.List;
-import java.util.Map;
 import java.util.concurrent.ExecutionException;
 
-public class BatchMessageService implements ConsumerFunction<String> {
+public class BatchMessageService implements ConsumerService<String> {
 
     private final Connection connection;
 
@@ -29,12 +30,17 @@ public class BatchMessageService implements ConsumerFunction<String> {
     }
 
     public static void main(String[] args) throws SQLException, ExecutionException, InterruptedException {
-        var batchService = new BatchMessageService();
-        try(var service = new KafkaService(CreateUserService.class.getSimpleName(),
-                "ECOMMERCE_USER_NOTIFY_ALL_USERS", batchService::parse,
-                Map.of())) {
-            service.run();
-        }
+        new ServiceRunner<>(BatchMessageService::new).start(1);
+    }
+
+    @Override
+    public String getConsumerGroup() {
+        return BatchMessageService.class.getSimpleName();
+    }
+
+    @Override
+    public String getTopic() {
+        return "ECOMMERCE_USER_NOTIFY_ALL_USERS";
     }
 
     @Override

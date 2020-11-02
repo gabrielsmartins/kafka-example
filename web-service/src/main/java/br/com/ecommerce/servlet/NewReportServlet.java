@@ -1,7 +1,7 @@
 package br.com.ecommerce.servlet;
 
 import br.com.ecommerce.common.CorrelationId;
-import br.com.ecommerce.common.KafkaDispatcher;
+import br.com.ecommerce.producer.KafkaDispatcher;
 
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;

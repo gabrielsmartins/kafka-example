@@ -7,4 +7,7 @@ include 'producer-service'
 include 'user-service'
 include 'web-service'
 include 'report-service'
+include 'service-new-order'
+include 'common-database'
+include 'common-database'
 
